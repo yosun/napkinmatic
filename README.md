@@ -44,7 +44,7 @@ The serverside includes two general endpoint: the first to begin the call and th
 #### Endpoint URLs
 
  - Napkinmatic Begin (NB) - accepts POST parameters `image` and `prompt`
- - Napkinmatic Callback (NC) - this is polled as the results are being processed, return `status: success` in the JSON format defined below for `CallbackClass`. `output` is a url array of images. (The controlnet demo app uses output[1] by default)
+ - Napkinmatic Callback (NC) - this is polled as the results are being processed, return `status: success` in the JSON format defined below for `CallbackClass`. `output` is an array of url to images. (The controlnet demo app uses `output[1]` by default)
 
 ````
 public class CallbackClass
