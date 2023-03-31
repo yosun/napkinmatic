@@ -15,8 +15,8 @@ The call architecture works like this:
 ```mermaid
 sequenceDiagram
 Spatial Computing App (SCA) ->> Napkinmatic Begin (NB): Posts image and prompt
-Napkinmatic Begin (NB) ->> Spatial Computing App (SCA): Returns Callback URL (NC)
-Spatial Computing App (SCA) --x Napkinmatic Callback (NC): polls (status == success)
+Napkinmatic Begin (NB) ->> Spatial Computing App (SCA): Returns Callback URL (callbaack)
+Spatial Computing App (SCA) --x Napkinmatic Callback (NC): polls with url=collback (status == success)
 Napkinmatic Callback (NC) ->> Spatial Computing App (SCA): CallbackClass json
 ```
 
@@ -43,8 +43,8 @@ The serverside includes two general endpoint: the first to begin the call and th
 
 #### Endpoint URLs
 
- - Napkinmatic Begin (NB) - accepts POST parameters `image` and `prompt`
- - Napkinmatic Callback (NC) - this is polled as the results are being processed, return `status: success` in the JSON format defined below for `CallbackClass`. `output` is an array of url to images. (The controlnet demo app uses `output[1]` by default)
+ - Napkinmatic Begin (NB) - accepts POST parameters `image` and `prompt` and returns a callback `url`
+ - Napkinmatic Callback (NC) - this is polled with `url=` callback url returned above, as the results are being processed. When done, return `status: success` in the JSON format defined below for `CallbackClass`. `output` is an array of url to images. (The controlnet demo app uses `output[1]` by default)
 
 ````
 public class CallbackClass
