@@ -16,7 +16,7 @@ The call architecture works like this:
 sequenceDiagram
 Spatial Computing App (SCA) ->> Napkinmatic Begin (NB): Posts image and prompt
 Napkinmatic Begin (NB) ->> Spatial Computing App (SCA): Returns Callback URL (callbaack)
-Spatial Computing App (SCA) --x Napkinmatic Callback (NC): polls with url=collback (status == success)
+Spatial Computing App (SCA) --x Napkinmatic Callback (NC): polls with url=callback (status == success)
 Napkinmatic Callback (NC) ->> Spatial Computing App (SCA): CallbackClass json
 ```
 
