@@ -6,7 +6,7 @@
 
 Napkinmatic is a FOSS spatial computing framework for backend and traditional full-stack developers to easily interface their AI serverside apps with a mobile-native-Unity AR app. 
 
-The Spatial Computing App (SCA) refers to the mobile-native-Unity app, and Napkinmatic* refer to the serverside endpoints, with parameters defined below. 
+The Spatial Computing App (SCA) refers to the mobile-native-Unity app, and Napkinmatic* refer to the serverside endpoints, with parameters defined below. Download the [sample SCA here](https://drive.google.com/file/d/1kQ2yekwjRF8ps2yheo4yWEjrWMl7Hrka/view?usp=share_link) or visit Napkinmatic.com for the latest beta.  
 
 **Note: you don't have to worry about the SCA or the frontend. Simply setup your serverside endpoints as defined in backend below.**
 
