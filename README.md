@@ -47,6 +47,12 @@ The serverside includes two general endpoint: the first to begin the call and th
  - Napkinmatic Callback (NC) - this is polled with `url=` callback url returned above, as the results are being processed. When done, return `status: success` in the JSON format defined below for `CallbackClass`. `output` is an array of url to images. (The controlnet demo app uses `output[1]` by default)
 
 ````
+{ 
+  "id":"00000000-0000-0000-0000-000000000000",
+  "status":"success",
+  "output":["https://domain.com/image0.png","https://domain.com/image1.png"]
+}
+
 public class CallbackClass
 {
     public string id;
